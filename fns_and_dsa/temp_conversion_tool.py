@@ -1,16 +1,16 @@
-FAHRENHEIT_TO_CELSIUS_FACTOR = (5/9)
-CELSIUS_TO_FAHRENHEIT_FACTOR = (9/5)
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 converted_temp = 0
 
 def convert_to_celsius(fahrenheit):
-    global converted_temp
-    converted_temp = (FAHRENHEIT_TO_CELSIUS_FACTOR * (fahrenheit - 32))
-    return converted_temp
+    global FAHRENHEIT_TO_CELSIUS_FACTOR
+    celsius = (FAHRENHEIT_TO_CELSIUS_FACTOR * (fahrenheit - 32))
+    return celsius
 
 def convert_to_fahrenheit(celsius):
-    global converted_temp
-    converted_temp = (CELSIUS_TO_FAHRENHEIT_FACTOR * celsius + 32)
-    return converted_temp
+    global CELSIUS_TO_FAHRENHEIT_FACTOR
+    fahrenheit = (CELSIUS_TO_FAHRENHEIT_FACTOR * celsius + 32)
+    return fahrenheit
 
 temperature = float(input("Enter the temperature to convert: "))
 specification = input("Is this temperature in celsius or fahrenheit? (C/F): ")
